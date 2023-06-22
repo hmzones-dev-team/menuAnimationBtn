@@ -1,0 +1,127 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #131212;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: fixed;
+    inset: 0
+}
+
+body .menuAnimated {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+body .menuAnimated.active ul.menu li {
+    -webkit-transform: rotateZ(calc(360deg/8*var(--i)));
+    transform: rotateZ(calc(360deg/8*var(--i)))
+}
+
+body .menuAnimated.active ion-icon {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+}
+
+body .menuAnimated button {
+    z-index: 16;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-shadow: 5px 5px 10px rgba(19, 18, 18, 0.25);
+    box-shadow: 5px 5px 10px rgba(19, 18, 18, 0.25);
+    cursor: pointer
+}
+
+body .menuAnimated button:hover {
+    -webkit-box-shadow: inset 2px 2px 5px rgba(19, 18, 18, 0.125);
+    box-shadow: inset 2px 2px 5px rgba(19, 18, 18, 0.125)
+}
+
+body .menuAnimated button ion-icon {
+    -webkit-transition: -webkit-transform 1.3s ease-in;
+    transition: -webkit-transform 1.3s ease-in;
+    transition: transform 1.3s ease-in, -webkit-transform 1.3s ease-in;
+    -webkit-transform: rotate(0deg);
+    transition: transform 1.3s ease-in;
+    transform: rotate(0deg)
+}
+
+body .menuAnimated ul.menu {
+    list-style-type: none;
+    margin: 0px;
+    width: 200px;
+    height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0px
+}
+
+body .menuAnimated ul.menu li {
+    -webkit-transform-origin: 100px;
+    transform-origin: 100px;
+    position: absolute;
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    left: 0%;
+    -webkit-transform: translateX(75px);
+    transform: translateX(75px);
+    -webkit-transition-delay: calc(0.1s*var(--i));
+    transition-delay: calc(0.1s*var(--i))
+}
+
+body .menuAnimated ul.menu li a {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: black
+}
